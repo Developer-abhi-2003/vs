@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffd6e8;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.2s;
+    }
+
+    #yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    #no {
+        background: #ddd;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>✨ , will you be my Valentine? 💕</h1>
+    <button id="yes">Yes 💖</button>
+    <button id="no">No 😅</button>
+</div>
+
+<script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+    
+        document.body.innerHTML = `
+                    <h1 style="font-size:31px; color:#ff4d6d;">
+                        My dear ❤️<br><br>
+                        Thanks for accepting my proposal 💖<br><br>
+                        YAYYY!!! 🎉🥰<br><br>
+                        कुछ शब्द मेरे दिल से खास तुम्हारे लिए 💕<br><br>
+                        हर उस हवा को क़ैद कर लूँ, जिसने तुझे छुआ,<br>
+                        हर उस बूँद को क़ैद कर लूँ, जिसने तेरे बदन को भिगोया।<br>
+                        हर उस रोशनी को क़ैद कर लूँ, जिसने तुझे निखारा,<br>
+                        हर उन आँखों को क़ैद कर लूँ, जिन्होंने तुझे देखा।<br>
+                        कैद कर लूं मैं तुझको खुद में,<br>
+                        और मैं कैद हो जाऊँ तुझमें ❤️
+            </h1>
+        `;
+    });
+</script>
+
+</body>
+</html>
